@@ -33,6 +33,10 @@ function App() {
           <div className="animate-fade-up-delay-7 mb-8 h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-gallery-800/15 to-transparent" />
           <Countdown targetDate={BIRTHDAY_TARGET} />
         </section>
+
+        <section className="flex flex-1 items-center justify-center pb-4 md:pb-8 px-2">
+          <p className="text-center text-[0.6rem]"><span className="text-[0.8rem]">Joyeux anniveraire {'<3'}</span><br />{`mdr y'a qqn qui a dit que le site etait mieux décoré que mon appart MDR MDR`}</p>
+        </section>
       </div>
     </main>
   )
