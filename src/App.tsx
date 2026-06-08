@@ -1,0 +1,41 @@
+import { Countdown } from './components/Countdown'
+import FrameGrid from './components/FrameGrid'
+import WoodenShelf from './components/WoodenShelf'
+import { BIRTHDAY_TARGET } from './constants'
+
+function App() {
+  return (
+    <main className="relative min-h-screen overflow-hidden bg-[#f5eedf]">
+      {/* <HeroBackground /> */}
+
+      <div className="relative z-10 flex flex-col">
+        <section className="flex flex-col flex-1 items-center justify-center">
+          <h1
+            className="font-sans text-[27cqi] leading-[1] uppercase text-gallery-900 animate-fade-up-delay-2 font-bold"
+            aria-label="Louisa"
+          >
+            LOUISA
+          </h1>
+          <div className="flex items-center justify-between  w-full px-0 mt-[-50px] px-1">
+            <h2 className="text-left">Birthday</h2>
+            <h2 className="text-right">11-06-2026</h2>
+          </div>
+        </section>
+        <section className="flex flex-1 items-center justify-center">
+          <FrameGrid />
+        </section>
+
+        <section className="flex flex-1 items-center justify-center pb-4 md:pb-8">
+          <WoodenShelf />
+        </section>
+
+        <section className="flex flex-col items-center pb-6 md:pb-10">
+          <div className="mb-8 h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-gallery-800/15 to-transparent" />
+          <Countdown targetDate={BIRTHDAY_TARGET} />
+        </section>
+      </div>
+    </main>
+  )
+}
+
+export default App

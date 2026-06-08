@@ -1,0 +1,181 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-handwriting: 'Caveat', 'Segoe Script', cursive;
+
+  --color-gallery-50: #f7f7f5;
+  --color-gallery-100: #ececea;
+  --color-gallery-200: #d8d8d4;
+  --color-gallery-800: #2a2a28;
+  --color-gallery-900: #111110;
+  --color-gallery-950: #0a0a09;
+
+  --color-accent-terracotta: #c45d3e;
+  --color-accent-sage: #6b7f6a;
+  --color-accent-slate: #4a6278;
+  --color-accent-gold: #b8954a;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    background-color: #f5f3ef;
+    color: var(--color-gallery-900);
+    font-family: var(--font-sans);
+  }
+
+  #root {
+    min-height: 100svh;
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .font-handwriting {
+    font-family: var(--font-handwriting);
+  }
+}
+
+@keyframes ken-burns {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(-2%, -1.5%, 0);
+  }
+}
+
+@keyframes gallery-fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  8%,
+  22% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+
+@keyframes slow-drift {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4%);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-ken-burns {
+  animation: ken-burns 28s ease-in-out infinite alternate;
+}
+
+.animate-gallery-fade {
+  animation: gallery-fade 48s ease-in-out infinite;
+}
+
+.animate-slow-drift {
+  animation: slow-drift 20s ease-in-out infinite alternate;
+}
+
+.animate-fade-up {
+  animation: fade-up 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fade-up 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.4s ease-in-out infinite;
+}
+
+/* Planche vue de profil — grain le long de la longueur */
+.shelf-plank {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 28px,
+      rgba(70, 42, 20, 0.1) 28px,
+      rgba(70, 42, 20, 0.1) 30px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 9px,
+      rgba(50, 28, 12, 0.05) 9px,
+      rgba(50, 28, 12, 0.05) 10px
+    ),
+    linear-gradient(
+      180deg,
+      #c9a06a 0%,
+      #b08850 35%,
+      #9a7040 65%,
+      #8a6038 100%
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 230, 190, 0.4),
+    inset 0 -1px 0 rgba(40, 22, 8, 0.3),
+    0 2px 6px rgba(60, 35, 18, 0.15);
+}
+
+/* Tranche avant — légère profondeur sous la planche */
+.shelf-edge {
+  background: linear-gradient(
+    180deg,
+    #6e4a2c 0%,
+    #5a3a24 100%
+  );
+  box-shadow: 0 3px 5px rgba(60, 35, 18, 0.18);
+}
+
