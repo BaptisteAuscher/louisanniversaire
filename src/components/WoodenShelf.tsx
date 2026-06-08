@@ -3,7 +3,7 @@ import { SHELF_ITEMS, type ShelfItem } from '../constants'
 
 const WoodenShelf = () => {
   return (
-    <div className="relative w-full max-w-[340px] px-2 sm:max-w-[380px]">
+    <div className="animate-fade-up-delay-6 relative w-full max-w-[340px] px-2 sm:max-w-[380px]">
       <div className="relative z-10 flex items-end justify-center gap-0">
         {SHELF_ITEMS.map((item) => (
           <ShelfObject key={item.id} item={item} />

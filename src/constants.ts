@@ -5,7 +5,7 @@ import louisianaPoster from './assets/louisiana-poster.png'
 import screenshotHinge from './assets/screenshot-hinge.png'
 
 /** Change cette date pour l'anniversaire de Louisa */
-export const BIRTHDAY_TARGET = new Date('2026-06-15T00:00:00')
+export const BIRTHDAY_TARGET = new Date('2026-06-11T00:00:00')
 
 export interface GalleryFrame {
   src: string
@@ -53,7 +53,7 @@ export const GALLERY_FRAMES: GalleryFrame[] = [
       side: 'left',
       variant: 'pompon',
       rotation: '1.5deg',
-      width: 'min(400px, 80vw)',
+      width: 'min(320px, 48vw)',
       aspectRatio: '9555/6738',
     },
   },

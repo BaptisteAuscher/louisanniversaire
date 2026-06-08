@@ -16,7 +16,7 @@ function App() {
           >
             LOUISA
           </h1>
-          <div className="flex items-center justify-between  w-full px-0 mt-[-50px] px-1">
+          <div className="animate-fade-up-delay-2 mt-[-16px] flex w-full items-center justify-between px-1 md:mt-[-32px] wide:mt-[-50px]">
             <h2 className="text-left">Birthday</h2>
             <h2 className="text-right">11-06-2026</h2>
           </div>
@@ -30,7 +30,7 @@ function App() {
         </section>
 
         <section className="flex flex-col items-center pb-6 md:pb-10">
-          <div className="mb-8 h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-gallery-800/15 to-transparent" />
+          <div className="animate-fade-up-delay-7 mb-8 h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-gallery-800/15 to-transparent" />
           <Countdown targetDate={BIRTHDAY_TARGET} />
         </section>
       </div>
