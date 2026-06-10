@@ -2,8 +2,11 @@ import { Countdown } from './components/Countdown'
 import FrameGrid from './components/FrameGrid'
 import WoodenShelf from './components/WoodenShelf'
 import { BIRTHDAY_TARGET } from './constants'
+import { useBirthdayConfetti } from './hooks/useBirthdayConfetti'
 
 function App() {
+  useBirthdayConfetti(BIRTHDAY_TARGET)
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#f5eedf]">
       {/* <HeroBackground /> */}
